@@ -1,0 +1,29 @@
+#+TITLE: nRF5x Blinky
+#+AUTHOR: Thomas Stenersen
+#+EMAIL: stenersen.thomas@gmail.com
+
+* Introduction
+This project is a simple blinky application and serves as an example of how to
+use CMake with the Nordic Semiconductor nRF5x SoCs and SDKs.
+
+* Requirements / Dependencies
+
+** Hardware
+- A nRF5x development kit or dongle
+
+** Software
+- =arm-none-eabi-gcc= toolchain
+- =nrfjprog= and =mergehex= from the Nordic MDK
+- CMake
+- Nordic Semiconductor SDK v9.0
+
+* Building and Flashing
+
+To build and flash the device
+#+BEGIN_SRC sh
+  # In project root repository
+  mkdir bin && cd bin
+  cmake -DSDK_ROOT=path/to/SDK9 .. # Use -G <generator> for another generator
+  make
+  make f_nrf_blinky                # Invokes nrfjprog for flashing the application
+#+END_SRC

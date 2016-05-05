@@ -1,0 +1,23 @@
+/*
+ * Driver configuration file - used by the Nordic SDK drivers to enable/disable
+ * hardware support.
+ */
+
+#ifndef NRF_DRV_CONFIG_H
+#define NRF_DRV_CONFIG_H
+
+#define GPIOTE_ENABLED 1
+#define GPIOTE_CONFIG_USE_SWI_EGU false
+#define GPIOTE_CONFIG_IRQ_PRIORITY APP_IRQ_PRIORITY_LOW
+#define GPIOTE_CONFIG_NUM_OF_LOW_POWER_EVENTS 1
+
+#define TIMER1_ENABLED 1
+#define TIMER1_CONFIG_FREQUENCY    NRF_TIMER_FREQ_62500Hz
+#define TIMER1_CONFIG_MODE         NRF_TIMER_MODE_TIMER
+#define TIMER1_CONFIG_BIT_WIDTH    NRF_TIMER_BIT_WIDTH_16
+#define TIMER1_CONFIG_IRQ_PRIORITY APP_IRQ_PRIORITY_LOW
+#define TIMER1_INSTANCE_INDEX      0
+
+#define TIMER_COUNT 1
+
+#endif
